@@ -45,28 +45,14 @@ import retrofit.Callback;
 import retrofit.RestAdapter;
 import retrofit.RetrofitError;
 import retrofit.converter.GsonConverter;
-import timber.log.Timber;
 
 public class ContributorsFragment extends GdgListFragment {
 
     protected ContributorAdapter mAdapter;
 
     @Override
-    public void onSaveInstanceState(Bundle outState) {
-        Timber.d("onSaveInstanceState()");
-        super.onSaveInstanceState(outState);
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        Timber.d("onResume()");
-    }
-
-    @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        Timber.d("onActivityCreated()");
 
         mAdapter = new ContributorAdapter(getActivity());
         setListAdapter(mAdapter);

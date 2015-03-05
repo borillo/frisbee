@@ -66,9 +66,8 @@ public class TranslatorsFragment extends ContributorsFragment {
             
     };
 
+    @Override
     protected void loadContributors() {
-        for (Contributor contributor : TRANSLATORS) {
-            mAdapter.add(contributor);
-        }
+        mAdapter.addAll(TRANSLATORS);
     }
 }
