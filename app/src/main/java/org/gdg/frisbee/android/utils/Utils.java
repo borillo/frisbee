@@ -161,6 +161,10 @@ public class Utils {
                 && mConMgr.getActiveNetworkInfo().isConnected();
     }
 
+    public static boolean isOffline(Context context) {
+        return !isOnline(context);
+    }
+
     public static boolean isEmulator() {
         Timber.d(Build.PRODUCT);
         return Build.PRODUCT.equals("google_sdk");
